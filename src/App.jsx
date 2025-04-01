@@ -4,8 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 export default function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Board />
@@ -31,6 +29,7 @@ function Square() {
 }
 
 export function Board() {
+  const [squares, setSquares] = useState(Array(9).fill(null));
   return (
     <>
       <div className="board-row">
